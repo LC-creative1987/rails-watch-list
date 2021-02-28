@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536066738135-f8aa1e958cc1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80);">
+  <div class="container text-center">
+    <h1>Create a list B******s</h1>
+    <div id="special">
+      <div class="container">
+        <h1>Add your favorite movie to the list</h1>
+        <div class="row">
+          <div class="col-12" style="color:white; font-size: 22px">
+            <%= simple_form_for [@list, @bookmark] do |f| %>
+              <%= f.input :comment %>
+              <%= f.association :movie %>
+              <%= f.button :submit, class: "btn btn-info" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1040&q=80);">
+  <div class="container text-center">
+    <h1>Hello peeps, here is your lists</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <%= link_to "Add a list", new_list_path, class: "btn btn-success mb-4" %>
+  <div class="row justify-content-between">
+    <% @lists.each do |list| %>
+      <%= link_to list_path list do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80)">
+        <%= list.name %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+  <br> <br>
+  <div class="container" style="padding: 0 !important;">
+    <div class="card" style="width: 18rem; padding: 0 !important;" >
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1591871987673-f1513e38493b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=896&q=80" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Movie title &#9733;&#9733;&#9733;&#9734;</h5>
+        <p class="card-text">Laura Ciciuletta</p>
+        <a href="https://youtu.be/GDXe0MAbhk4" class="btn btn-primary">submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
